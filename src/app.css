@@ -1,0 +1,106 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header a {
+  text-decoration: none;
+  color: blue;
+}
+
+.new-event-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar {
+  margin: 20px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+}
+
+.ticket-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ticket {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  width: 200px;
+  text-align: left;
+}
+
+.ticket img {
+  width: 100%;
+  height: auto;
+}
+
+.ticket h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.ticket p {
+  margin: 10px;
+  color: grey;
+  font-size: 0.9em;
+}
+
+.create-event {
+  padding: 20px;
+}
+
+.create-event form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.create-event label {
+  margin-top: 10px;
+}
+
+.create-event input, .create-event textarea {
+  width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.create-event button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.event-detail {
+  padding: 20px;
+}
+
+.event-detail img {
+  width: 100%;
+  height: auto;
+}

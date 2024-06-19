@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "de566f98-ae00-4aab-82eb-24f98fa19400",
+		"name": "Tickets MNS API Reference",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17905904"
+	},
+	"item": [
+		{
+			"name": "Get evenements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/evenements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"evenements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get evenement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/evenements/clxkoc13l0002s3cwreb7xi0g",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"evenements",
+						"clxkoc13l0002s3cwreb7xi0g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post evenement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Mon titre\",\r\n    \"description\": \"Ma description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/evenements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"evenements"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
