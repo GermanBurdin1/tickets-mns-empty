@@ -3,7 +3,8 @@ import SearchBar from './searchBar';
 import TicketList from './ticketList';
 
 const MainPage = () => {
-  const [tickets, setTickets] = useState([]);
+  const [allTickets, setAllTickets] = useState([]);
+  const [filteredTickets, setFilteredTickets] = useState([]); 
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -11,7 +12,8 @@ const MainPage = () => {
       try {
         const response = await fetch('/api/evenements');
         const data = await response.json();
-        setTickets(data);
+        setAllTickets(data);
+        setFilteredTickets(data); 
       } catch (error) {
         console.error('Erreur:', error);
       }
@@ -22,16 +24,20 @@ const MainPage = () => {
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filteredTickets = tickets.filter(ticket =>
-      ticket.titre.toLowerCase().includes(query.toLowerCase())
-    );
-    setTickets(filteredTickets);
+    if (query === '') {
+      setFilteredTickets(allTickets); 
+    } else {
+      const filtered = allTickets.filter(ticket =>
+        ticket.titre.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredTickets(filtered);
+    }
   };
 
   return (
     <>
       <SearchBar onSearch={handleSearch} />
-      <TicketList tickets={tickets} />
+      <TicketList tickets={filteredTickets} />
     </>
   );
 };

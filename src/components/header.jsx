@@ -20,7 +20,7 @@ function Header() {
     <header className="header">
       <h1>Tickets MNS</h1>
       <div>
-        <a href="#">Bareme</a>
+			<a href="#" class="bareme-link">Bareme</a>
         <Link to="/create-event">
           <button className="new-event-button">Créer nouvel événement</button>
         </Link>

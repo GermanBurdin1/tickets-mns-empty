@@ -69,19 +69,26 @@ body.dark-mode {
 }
 
 .ticket-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  justify-items: center; 
 }
 
 .ticket {
+  width: 100%; 
+  max-width: 280px; 
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
-  margin: 10px;
-  width: 200px;
   text-align: left;
   transition: background-color 0.3s, border-color 0.3s;
+}
+
+.bareme-link {
+  position: absolute;
+  left: 260px;
+  top: 30px;
 }
 
 .ticket img {
@@ -124,3 +131,61 @@ body.dark-mode .theme-toggle-button {
 body.dark-mode .theme-toggle-button:hover {
   background-color: #003f7f;
 }
+
+body.dark-mode .header a {
+  color: white;
+}
+
+body.dark-mode .ticket a {
+  color: white;
+}
+
+.create-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  text-align: left;
+}
+
+.create-event form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.create-event label {
+  margin-top: 10px;
+}
+
+.create-event input,
+.create-event textarea {
+  width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.create-event button {
+  margin-top: 20px;
+  padding: 15px 30px; 
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em; 
+  transition: background-color 0.3s; 
+}
+
+.create-event button:disabled {
+  background-color: grey;
+}
+
+.create-event button:hover {
+  background-color: darkgreen; 
+}
+
+.create-event p {
+  margin-top: 20px;
+}
+
