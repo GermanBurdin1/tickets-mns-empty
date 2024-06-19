@@ -31,9 +31,6 @@ body.dark-mode {
 .header a {
   text-decoration: none;
   color: blue;
-  position: absolute;
-  top: 20px; 
-  left: 20px; 
 }
 
 
