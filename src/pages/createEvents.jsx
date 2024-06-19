@@ -7,34 +7,37 @@ function CreateEvent() {
   const [statusMessage, setStatusMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatusMessage('Chargement...');
-
-    try {
-      const response = await fetch('/api/evenements', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ titre: title, description }),
-      });
-
-      if (response.ok) {
-        setTimeout(() => {
-          setStatusMessage('Événement créé avec succès');
-          setLoading(false);
-        }, 2000); 
-      } else {
-        const errorData = await response.json();
-        setStatusMessage(`Erreur: ${errorData.message}`);
-        setLoading(false);
-      }
-    } catch (error) {
-      setStatusMessage('Erreur de connexion');
-      setLoading(false);
-    }
-  };
+		e.preventDefault();
+		setLoading(true);
+		setStatusMessage('Chargement...');
+	
+		try {
+			const response = await fetch('/api/evenements', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ titre: title, description }),
+			});
+	
+			if (response.ok) {
+				setTimeout(() => {
+					setStatusMessage('Événement créé avec succès');
+					setLoading(false);
+					setTitle(''); 
+					setDescription(''); 
+				}, 2000); 
+			} else {
+				const errorData = await response.json();
+				setStatusMessage(`Erreur: ${errorData.message}`);
+				setLoading(false);
+			}
+		} catch (error) {
+			setStatusMessage('Erreur de connexion');
+			setLoading(false);
+		}
+	};
+	
 
   return (
     <div className="create-event">
