@@ -1,5 +1,5 @@
 import React from 'react';
-import Ticket from './Ticket';
+import Ticket from './ticket';
 
 const tickets = [
   { id: 1, title: 'claudeo placeat ta...', date: '19/06/2024 à 15:26:40', image: 'path_to_image_1' },

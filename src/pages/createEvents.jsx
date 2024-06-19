@@ -6,7 +6,6 @@ function CreateEvent() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Здесь должна быть логика отправки данных на сервер
     console.log({ title, description });
   };
 

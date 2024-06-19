@@ -1,5 +1,17 @@
-.App {
+body {
   font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.App {
   text-align: center;
 }
 
@@ -8,6 +20,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
 }
 
 .header h1 {
@@ -17,7 +31,11 @@
 .header a {
   text-decoration: none;
   color: blue;
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
 }
+
 
 .new-event-button {
   background-color: green;
@@ -25,6 +43,23 @@
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+.new-event-button:hover {
+  background-color: darkgreen;
+}
+
+.theme-toggle-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.theme-toggle-button:hover {
+  background-color: #0056b3;
 }
 
 .search-bar {
@@ -49,6 +84,7 @@
   margin: 10px;
   width: 200px;
   text-align: left;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .ticket img {
@@ -67,40 +103,27 @@
   font-size: 0.9em;
 }
 
-.create-event {
-  padding: 20px;
+body.dark-mode .header {
+  background-color: #444444;
 }
 
-.create-event form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+body.dark-mode .ticket {
+  border-color: #555555;
+  background-color: #444444;
 }
 
-.create-event label {
-  margin-top: 10px;
+body.dark-mode .new-event-button {
+  background-color: #28a745;
 }
 
-.create-event input, .create-event textarea {
-  width: 300px;
-  padding: 10px;
-  margin-top: 5px;
+body.dark-mode .new-event-button:hover {
+  background-color: #218838;
 }
 
-.create-event button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
+body.dark-mode .theme-toggle-button {
+  background-color: #0056b3;
 }
 
-.event-detail {
-  padding: 20px;
-}
-
-.event-detail img {
-  width: 100%;
-  height: auto;
+body.dark-mode .theme-toggle-button:hover {
+  background-color: #003f7f;
 }
